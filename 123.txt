@@ -1,0 +1,10 @@
+create login Abc with password= 'abc@123'
+create user xyz for login Abc
+create role MainRoll
+
+exec sp_addrolemember 'mainroll', 'xyz'
+
+grant select to xyz
+grant update to xyz
+grant insert to xyz
+grant execute to xyz
